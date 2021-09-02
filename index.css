@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body {
     height: unset;
     padding: 100px 0;
@@ -41,7 +41,7 @@ p {
   justify-content: center;
   border-radius: 8px;
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .cards {
     width: 90%;
     flex-direction: column;
@@ -54,7 +54,7 @@ p {
 .card:first-of-type {
   border-radius: 8px 0 0 8px;
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .card:first-of-type {
     border-radius: 8px 8px 0 0;
   }
@@ -62,7 +62,7 @@ p {
 .card:last-of-type {
   border-radius: 0 8px 8px 0;
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .card:last-of-type {
     border-radius: 0 0 8px 8px;
   }
