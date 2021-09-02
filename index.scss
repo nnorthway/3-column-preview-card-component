@@ -1,0 +1,104 @@
+$mobile: 375px;
+$desktop: 1440px;
+$primaryOrange: hsl(31,77%,52%);
+$primaryCyan: hsl(184,100%,22%);
+$primaryDarkCyan: hsl(179,100%,13%);
+$neutralWhite: hsla(0,0%,100%,.75); /*Paragraphs*/ 
+$neutralGray: hsl(0,0%,95%); /*background, headings, buttons*/
+$fontSize: 15px;
+
+body {
+  background: $neutralGray;
+  font-size: $fontSize;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  background-color: $neutralGray;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $mobile) {
+    height: unset;
+    padding: 100px 0;
+  }
+}
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $neutralGray;
+  font-size: 3em;
+}
+p {
+  color: $neutralWhite;
+}
+
+.cards {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  border-radius: 8px;
+  @media (max-width: $mobile) {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+
+.card {
+  &:first-of-type {
+    border-radius: 8px 0 0 8px;
+    @media (max-width: $mobile) {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  &:last-of-type {
+    border-radius: 0 8px 8px 0;
+    @media (max-width: $mobile) {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  padding: 50px;
+  &.bg-orange {
+    background-color: $primaryOrange;
+    .btn {
+      color: $primaryOrange;
+    }
+  }
+  &.bg-cyan {
+    background-color: $primaryCyan;
+    .btn {
+      color: $primaryCyan;
+    }
+  }
+  &.bg-dark-cyan {
+    background-color: $primaryDarkCyan;
+    .btn {
+      color: $primaryDarkCyan;
+    }
+  }
+  .text {
+    p {
+      margin-bottom: 3em;
+      line-height: 2em;
+    }
+  }
+  .link {
+    .btn {
+      display: inline-block;
+      background-color: $neutralGray;
+      border-radius: 25px;
+      border: 2px solid $neutralGray;
+      padding: 1em 2em;
+      text-decoration: none;
+      &:hover {
+        background: transparent;
+        color: $neutralGray;
+      }
+    }
+  }
+}
